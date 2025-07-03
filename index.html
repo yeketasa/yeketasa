@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tasya's Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(to bottom, #f9ede7, #f3dcd0);
+      color: #4f3e36;
+    }
+
+    body::before,
+    body::after {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #f3dcd0 0%, #f9ede7 70%, transparent 100%);
+      z-index: 0;
+      filter: blur(100px);
+    }
+
+    body::before {
+      top: -100px;
+      left: -100px;
+    }
+
+    body::after {
+      bottom: -100px;
+      right: -100px;
+    }
+
+    .overlay {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(3px);
+      color: #4f3e36;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .intro {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .tv-frame {
+      width: 200px;
+      height: 200px;
+      background: #3b3b3b;
+      border: 6px solid #a6977b;
+      border-radius: 50%;
+      padding: 8px;
+      position: relative;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+      flex-shrink: 0;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .text-content {
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 10px 0;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .welcome-text {
+      font-size: 1.2em;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+
+    .scroll-button {
+      background: #4f3e36;
+      color: #f9ede7;
+      padding: 12px 30px;
+      font-weight: 600;
+      font-size: 1em;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, .3);
+      text-decoration: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .scroll-button:hover {
+      background: #6a544a;
+      color: #fff;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: .9em;
+      color: #4f3e36aa;
+      font-style: italic;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .intro {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-content {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Home Section -->
+<div class="overlay" id="home-section">
+  <div class="intro">
+    <div class="tv-frame">
+      <img src="images/tasa13.jpg" alt="sofea profile" class="profile-img">
+    </div>
+    <div class="text-content">
+      <h1>hello, tasa</h1>
+      <p class="welcome-text">Welcome to my website</p>
+      <a href="about.html" class="scroll-button">ABOUT ME</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>All rights reserved by yeketasa, 2025</p>
+</footer>
+
+</body>
+</html>
