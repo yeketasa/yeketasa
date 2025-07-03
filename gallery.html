@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f9ede7, #f3dcd0);
+      background-color: #4f3e36;
+      color: #4f3e36;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 1px solid #d5c1b8;
+      background-color: #f3dcd0;
+    }
+
+    .hero-buttons {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .hero-buttons a {
+      text-decoration: none;
+      background-color: #4f3e36;
+      color: #f9ede7;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-buttons a:hover {
+      background-color: #3e2f29;
+    }
+
+    audio {
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* SLIDE ANIMATION */
+    .gallery-wrapper {
+      overflow: hidden;
+      width: 100%;
+      padding: 20px 0;
+      background-color: #f9ede7;
+    }
+
+    .gallery-scroll {
+      display: flex;
+      width: max-content;
+      animation: slide-scroll 60s linear infinite;
+    }
+
+    @keyframes slide-scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .gallery-item {
+      display: inline-block;
+      width: 200px;   /* kecilkan saiz */
+      height: 280px;  /* kecilkan saiz */
+      margin-right: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  My Yeketasa Gallery
+</header>
+
+<div class="hero-buttons">
+  <a href="index.html">INDEX</a>
+  <a href="about.html">ABOUT ME</a>
+  <a href="education.html">EDUCATION</a>   
+  <a href="family.html">FAMILY</a>
+  <a href="friends.html">FRIENDS</a>
+  <a href="favplace.html">FAV PLACE</a>
+  <a href="gallery.html">GALLERY</a>
+</div>
+
+<!-- Audio Player -->
+<audio controls autoplay loop>
+  <source src="audio 2.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Sliding Gallery -->
+<div class="gallery-wrapper">
+  <div class="gallery-scroll">
+    <div class="gallery-item"><img src="images/tasa.jpg" alt="Photo 1"></div>
+    <div class="gallery-item"><img src="images/tasya1.jpg" alt="Photo 2"></div>
+    <div class="gallery-item"><img src="images/tasya3.jpg" alt="Photo 3"></div>
+    <div class="gallery-item"><img src="images/tasya25.jpg" alt="Photo 4"></div>
+    <div class="gallery-item"><img src="images/tasya5.jpg" alt="Photo 5"></div>
+    <div class="gallery-item"><img src="images/tasya2.jpg" alt="Photo 6"></div>
+    <div class="gallery-item"><img src="images/tasya20.jpg" alt="Photo 7"></div>
+    <div class="gallery-item"><img src="images/tasya6.jpg" alt="Photo 8"></div>
+    <div class="gallery-item"><img src="images/tasya15.jpg" alt="Photo 9"></div>
+    <div class="gallery-item"><img src="images/tasya23.jpg" alt="Photo 10"></div>
+    <div class="gallery-item"><img src="images/tasya11.jpg" alt="Photo 11"></div>
+    <div class="gallery-item"><img src="images/tasya28.jpg" alt="Photo 12"></div>
+    <div class="gallery-item"><img src="images/tasya17.jpg" alt="Photo 13"></div>
+    <div class="gallery-item"><img src="images/tasya12.jpg" alt="Photo 14"></div>
+    <div class="gallery-item"><img src="images/tasya8.jpg" alt="Photo 15"></div>
+    <div class="gallery-item"><img src="images/tasya4.jpg" alt="Photo 16"></div>
+    <div class="gallery-item"><img src="images/tasya13.jpg" alt="Photo 17"></div>
+    <div class="gallery-item"><img src="images/tasya7.jpg" alt="Photo 18"></div>
+    <div class="gallery-item"><img src="images/tasya21.jpg" alt="Photo 19"></div>
+    <div class="gallery-item"><img src="images/tasya9.jpg" alt="Photo 20"></div>
+    <div class="gallery-item"><img src="images/tasya18.jpg" alt="Photo 21"></div>
+    <div class="gallery-item"><img src="images/tasya22.jpg" alt="Photo 22"></div>
+    <div class="gallery-item"><img src="images/tasya14.jpg" alt="Photo 23"></div>
+    <div class="gallery-item"><img src="images/tasya24.jpg" alt="Photo 24"></div>
+    <div class="gallery-item"><img src="images/tasya26.jpg" alt="Photo 25"></div>
+    <div class="gallery-item"><img src="images/tasya16.jpg" alt="Photo 26"></div>
+    <div class="gallery-item"><img src="images/tasya10.jpg" alt="Photo 27"></div>
+    <div class="gallery-item"><img src="images/tasya27.jpg" alt="Photo 28"></div>
+
+    <!-- Ulang semula untuk animasi berterusan -->
+    <div class="gallery-item"><img src="images/tasa.jpg" alt="repeat 1"></div>
+    <div class="gallery-item"><img src="images/tasya1.jpg" alt="repeat 2"></div>
+    <div class="gallery-item"><img src="images/tasya3.jpg" alt="repeat 3"></div>
+    <div class="gallery-item"><img src="images/tasya25.jpg" alt="repeat 4"></div>
+    <div class="gallery-item"><img src="images/tasya5.jpg" alt="repeat 5"></div>
+    <div class="gallery-item"><img src="images/tasya2.jpg" alt="repeat 6"></div>
+    <div class="gallery-item"><img src="images/tasya20.jpg" alt="repeat 7"></div>
+    <div class="gallery-item"><img src="images/tasya6.jpg" alt="repeat 8"></div>
+    <div class="gallery-item"><img src="images/tasya15.jpg" alt="repeat 9"></div>
+    <div class="gallery-item"><img src="images/tasya23.jpg" alt="repeat 10"></div>
+    <div class="gallery-item"><img src="images/tasya11.jpg" alt="repeat 11"></div>
+    <div class="gallery-item"><img src="images/tasya28.jpg" alt="repeat 12"></div>
+    <div class="gallery-item"><img src="images/tasya17.jpg" alt="repeat 13"></div>
+    <div class="gallery-item"><img src="images/tasya12.jpg" alt="repeat 14"></div>
+    <div class="gallery-item"><img src="images/tasya8.jpg" alt="repeat 15"></div>
+    <div class="gallery-item"><img src="images/tasya4.jpg" alt="repeat 16"></div>
+    <div class="gallery-item"><img src="images/tasya13.jpg" alt="repeat 17"></div>
+    <div class="gallery-item"><img src="images/tasya7.jpg" alt="repeat 18"></div>
+    <div class="gallery-item"><img src="images/tasya21.jpg" alt="repeat 19"></div>
+    <div class="gallery-item"><img src="images/tasya9.jpg" alt="repeat 20"></div>
+    <div class="gallery-item"><img src="images/tasya18.jpg" alt="repeat 21"></div>
+    <div class="gallery-item"><img src="images/tasya22.jpg" alt="repeat 22"></div>
+    <div class="gallery-item"><img src="images/tasya14.jpg" alt="repeat 23"></div>
+    <div class="gallery-item"><img src="images/tasya24.jpg" alt="repeat 24"></div>
+    <div class="gallery-item"><img src="images/tasya26.jpg" alt="repeat 25"></div>
+    <div class="gallery-item"><img src="images/tasya16.jpg" alt="repeat 26"></div>
+    <div class="gallery-item"><img src="images/tasya10.jpg" alt="repeat 27"></div>
+    <div class="gallery-item"><img src="images/tasya27.jpg" alt="repeat 28"></div>
+  </div>
+</div>
+
+</body>
+</html>
