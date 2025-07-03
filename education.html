@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f9ede7, #f3dcd0); /* updated background */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #4f3e36;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .hero-buttons a {
+      background: #4f3e36;
+      color: #f9ede7;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 8px;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .hero-buttons a:hover {
+      background: #6a544a;
+      color: #f9ede7;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      color: #4f3e36;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .dropdowns {
+      margin-top: 20px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #4f3e36;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #f9ede7;
+      color: #4f3e36;
+      font-weight: bold;
+    }
+
+    #education-info {
+      margin-top: 20px;
+      display: none;
+      background-color: #f9ede7;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    #education-info img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #education-info p {
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Education</h1>
+
+    <div class="hero-buttons">
+      <a href="index.html">INDEX</a>
+      <a href="about.html">ABOUT ME</a>
+      <a href="education.html">EDUCATION</a>
+      <a href="family.html">FAMILY</a>
+      <a href="friends.html">FRIENDS</a>
+      <a href="favplace.html">FAV PLACE</a>
+      <a href="gallery.html">GALLERY</a>
+    </div>
+
+    <div class="content">
+      <div class="dropdowns">
+        <select onclick="showInfo('Sekolah Kebangsaan Islah')">
+          <option>Sekolah Kebangsaan Islah</option>
+        </select>
+        <select onclick="showInfo('Maahad Pengajian Islam')">
+          <option>Maahad Pengajian Islam</option>
+        </select>
+        <select onclick="showInfo('UiTM Machang')">
+          <option>UiTM Machang</option>
+        </select>
+      </div>
+
+      <div id="education-info">
+        <img id="edu-image" src="" alt="education image" />
+        <p id="edu-text"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const eduInfo = document.getElementById('education-info');
+    const eduImage = document.getElementById('edu-image');
+    const eduText = document.getElementById('edu-text');
+
+    const educationData = {
+      "Sekolah Kebangsaan Islah": {
+        img: "images/sk islah.jpg",
+        text: "i began my primary education at Sekolah Kebangsaan Islah, where i built a strong academic foundation and discovered my love for learning."
+      },
+      "Maahad Pengajian Islam": {
+        img: "images/mpi.jpg",
+        text: "at Maahad Pengajian Islam, i deepened my knowledge in religious studies and developed discipline and character."
+      },
+      "UiTM Machang": {
+        img: "images/uitm.jpg",
+        text: "i pursued my studies at UiTM Machang in a field that i am passionate about. Studying here has been a meaningful experience that helped me grow to become more independent and knowledgeable."
+      }
+    };
+
+    function showInfo(school) {
+      const data = educationData[school];
+      if (data) {
+        eduImage.src = data.img;
+        eduText.textContent = data.text;
+        eduInfo.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
