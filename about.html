@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <title>My About Me</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #f9ede7, #f3dcd0);
+      color: #4f3e36;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before,
+    body::after {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle at center, #f3dcd0 0%, #f9ede7 70%, transparent 100%);
+      z-index: -1;
+      filter: blur(100px);
+    }
+
+    body::before {
+      top: -100px;
+      left: -100px;
+    }
+
+    body::after {
+      bottom: -100px;
+      right: -100px;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #fdf5e6;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 180px 20px 100px;
+    }
+
+    .hero #currentTime {
+      color: #4f3e36;
+      font-weight: bold;
+      font-size: 28px;
+      margin-top: -40px; /* Naikkan hanya masa */
+      margin-bottom: 5px;
+    }
+
+    .hero #currentDate {
+      color: #4f3e36;
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin: 10px 0;
+      color: #4f3e36;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+      color: #4f3e36;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .hero-buttons a {
+      background: #4f3e36;
+      color: #f9ede7;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 8px;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .hero-buttons a:hover {
+      background: #6a544a;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #6a544a;
+      width: 100%;
+      color: white;
+      font-size: 14px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    .game-box {
+      margin-top: 10px;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .game-box button,
+    #gameButton,
+    #closeModal {
+      padding: 10px 20px;
+      font-weight: bold;
+      background: #4f3e36;
+      color: #f9ede7;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 10px 5px 0 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .game-box button:hover,
+    #gameButton:hover,
+    #closeModal:hover {
+      background: #6a544a;
+      color: #fff;
+    }
+
+    #gameModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      align-items: center;
+      justify-content: center;
+    }
+
+    #modalContent {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      width: 360px;
+      max-width: 90%;
+      text-align: center;
+      color: black;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    #gameCanvas {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      display: block;
+      margin: 10px auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero section -->
+<div class="hero">
+  <p id="currentTime"></p>
+  <p id="currentDate"></p>
+  <h1>I'm Nur Ain Natasya Adnan</h1>
+  <p>i'm 23 years old and was born in Kota Bharu, Kelantan on October 17, 2002. i'm an active and motivated individual who enjoys playing badminton during my free time. i believe that discipline and passion both in sports and in life are keys to personal growth.</p>
+
+  <div class="hero-buttons">
+    <a href="index.html">INDEX</a>
+    <a href="about.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="friends.html">FRIENDS</a>
+    <a href="favplace.html">FAV PLACE</a>
+    <a href="gallery.html">GALLERY</a>
+  </div>
+</div>
+
+<!-- Footer section -->
+<footer>
+  <div class="social-links">
+    <a href="https://www.instagram.com/_.natasyaaa" target="_blank">Instagram</a>
+    <a href="https://www.tiktok.com/@babyelephanttt" target="_blank">TikTok</a>
+    <a href="https://wa.me/601169898792" target="_blank">WhatsApp</a>
+  </div>
+  <div class="game-box">
+    <button id="openGameBtn">🎮</button>
+  </div>
+</footer>
+
+<!-- Modal for game -->
+<div id="gameModal">
+  <div id="modalContent">
+    <h3>Game Kotak Lompat</h3>
+    <canvas id="gameCanvas" width="320" height="160"></canvas>
+    <div>
+      <button id="gameButton">MULAKAN GAME</button>
+      <button id="closeModal">TUTUP</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function updateTime() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString('en-US', {
+      hour: '2-digit', minute: '2-digit', second: '2-digit'
+    });
+    document.getElementById('currentTime').textContent = timeString;
+
+    const dateString = now.toLocaleDateString('en-GB', {
+      weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+    });
+    document.getElementById('currentDate').textContent = dateString;
+  }
+
+  setInterval(updateTime, 1000);
+  updateTime();
+
+  const gameModal = document.getElementById('gameModal');
+  const openGameBtn = document.getElementById('openGameBtn');
+  const closeModalBtn = document.getElementById('closeModal');
+  const gameButton = document.getElementById('gameButton');
+  const canvas = document.getElementById('gameCanvas');
+  const ctx = canvas.getContext('2d');
+
+  let animationId, gameOver = false, score = 0;
+  let dino = { x: 30, y: 110, width: 30, height: 30, vy: 0, gravity: 2, jumpPower: 18, grounded: true };
+  let cactus = { x: 320, y: 120, width: 20, height: 30 };
+
+  function resetGame() {
+    dino.y = 110;
+    dino.vy = 0;
+    dino.grounded = true;
+    cactus.x = 320;
+    score = 0;
+    gameOver = false;
+    gameButton.textContent = "MULAKAN GAME";
+  }
+
+  function update() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    dino.y += dino.vy;
+    dino.vy += dino.gravity;
+
+    if (dino.y >= 110) {
+      dino.y = 110;
+      dino.vy = 0;
+      dino.grounded = true;
+    }
+
+    cactus.x -= 5;
+    if (cactus.x + cactus.width < 0) {
+      cactus.x = canvas.width;
+      score++;
+    }
+
+    if (dino.x < cactus.x + cactus.width && dino.x + dino.width > cactus.x &&
+        dino.y < cactus.y + cactus.height && dino.y + dino.height > cactus.y) {
+      gameOver = true;
+      ctx.fillStyle = "red";
+      ctx.font = "16px sans-serif";
+      ctx.fillText("Game Over! Skor: " + score, 60, 80);
+      gameButton.textContent = "MAIN SEMULA";
+      return;
+    }
+
+    drawDino();
+    drawCactus();
+    ctx.fillStyle = "black";
+    ctx.font = "12px sans-serif";
+    ctx.fillText("Skor: " + score, 10, 20);
+
+    animationId = requestAnimationFrame(update);
+  }
+
+  function drawDino() {
+    ctx.fillStyle = "green";
+    ctx.fillRect(dino.x, dino.y, dino.width, dino.height);
+  }
+
+  function drawCactus() {
+    ctx.fillStyle = "darkgreen";
+    ctx.fillRect(cactus.x, cactus.y, cactus.width, cactus.height);
+  }
+
+  document.onkeydown = function(e) {
+    if (e.code === "Space" && dino.grounded && !gameOver) {
+      dino.vy = -dino.jumpPower;
+      dino.grounded = false;
+    }
+  };
+
+  openGameBtn.onclick = function() {
+    gameModal.style.display = "flex";
+    resetGame();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawDino();
+    drawCactus();
+    update();
+  };
+
+  closeModalBtn.onclick = function() {
+    gameModal.style.display = "none";
+    cancelAnimationFrame(animationId);
+    gameOver = true;
+  };
+
+  gameButton.onclick = function() {
+    if (gameOver) {
+      resetGame();
+      update();
+    }
+  };
+</script>
+
+</body>
+</html>
