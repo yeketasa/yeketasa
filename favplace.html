@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fav Place</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #f9ede7, #f3dcd0);
+      background-color: #4f3e36;
+      color: #4f3e36;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      margin: 10px 0 20px 0;
+      color: #4f3e36;
+    }
+
+    .hero-buttons {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 15px;
+      background-color: #4f3e36;
+      color: #f9ede7;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .hero-buttons a:hover {
+      background-color: #3e2f29;
+    }
+
+    .header-gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header-gallery figure {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 180px;
+      flex-shrink: 0;
+    }
+
+    .header-gallery img {
+      width: 180px;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid #4f3e36;
+    }
+
+    .header-gallery figcaption {
+      margin-top: 5px;
+      font-size: 13px;
+      color: #4f3e36;
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .date-box {
+      background-color: #4f3e36;
+      color: #f3dcd0;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    .calendar-table th,
+    .calendar-table td {
+      border: 1px solid #f3dcd0;
+      padding: 5px;
+      text-align: center;
+    }
+
+    .calendar-table th {
+      background-color: #6b4b3e;
+    }
+
+    .card {
+      background-color: #fffaf7;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #4f3e36;
+    }
+
+    .tasks-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tasks-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #e0cfc6;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-gallery {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tajuk Utama -->
+  <h1>My Fav Place At Pantai Timur</h1>
+
+  <!-- Hero Buttons -->
+  <div class="hero-buttons">
+    <a href="index.html">INDEX</a>
+    <a href="about.html">ABOUT ME</a>
+    <a href="education.html">EDUCATION</a>
+    <a href="family.html">FAMILY</a>
+    <a href="friends.html">FRIENDS</a>
+    <a href="favplace.html">FAV PLACE</a>
+    <a href="gallery.html">GALLERY</a>
+  </div>
+
+  <!-- Galeri Gambar Atas dengan Nama -->
+  <div class="header-gallery">
+    <figure>
+      <img src="images/place klate.jpg" alt="Kelantan 1">
+      <figcaption>Pasar Siti Khadijah</figcaption>
+    </figure>
+    <figure>
+      <img src="images/place klate 2.jpg" alt="Kelantan 2">
+      <figcaption>Lapangan Terbang Pengkalan Chepa</figcaption>
+    </figure>
+    <figure>
+      <img src="images/place ganu.jpg" alt="Terengganu 1">
+      <figcaption>Pasar Payang</figcaption>
+    </figure>
+    <figure>
+      <img src="images/place ganu 2.jpg" alt="Terengganu 2">
+      <figcaption>Drawbridge</figcaption>
+    </figure>
+    <figure>
+      <img src="images/place pahang.jpg" alt="Pahang 1">
+      <figcaption>Colmar Tropicale</figcaption>
+    </figure>
+    <figure>
+      <img src="images/place pahang 2.jpg" alt="Pahang 2">
+      <figcaption>Teluk Cempedak</figcaption>
+    </figure>
+  </div>
+
+  <!-- Penerangan -->
+  <p>
+    my favourite places in Malaysia are Pasar Siti Khadijah in Kelantan, Pasar Payang in Terengganu, and Colmar Tropicale in Pahang. Pasar Siti Khadijah is a popular market known for its local food, colourful batik, and friendly atmosphere. Pasar Payang is another traditional market where I enjoy shopping for souvenirs and trying Terengganu delicacies. Colmar Tropicale is a French themed village in the hills of Pahang, offering a cool climate and beautiful scenery. These places are special to me because they reflect Malaysia’s unique culture, charm, and beauty.
+  </p>
+
+  <!-- Grid Kandungan Utama -->
+  <div class="main-grid">
+    <!-- Masa & Kalendar -->
+    <div class="date-box">
+      <div id="clock" style="font-size: 32px; font-weight: bold;">--:--:--</div>
+      <div style="margin-top: 10px; font-size: 20px;">Current Time</div>
+
+      <div style="margin-top: 20px;">
+        <h4 id="calendar-title">🗓️</h4>
+        <table class="calendar-table" id="calendar-table">
+          <!-- JavaScript will fill this -->
+        </table>
+      </div>
+    </div>
+
+    <!-- Aktiviti -->
+    <div class="card">
+      <h3>💡 Current Activities</h3>
+      <ul class="tasks-list">
+        <li>visiting traditional markets like Pasar Payang & Pasar Siti Khadijah</li>
+        <li>enjoying local dishes such as nasi dagang & keropok lekor</li>
+        <li>ATV rides</li>
+        <li>swimming and relaxing at beaches like Teluk Cempedak & Batu Buruk</li>
+        <li>flying kites and beach games</li>
+        <li>experiencing cultural shows like wayang kulit & gamelan</li>
+        <li>shopping for batik, songket, and handmade crafts</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // JAM SEMASA
+    function updateClock() {
+      const now = new Date();
+      const h = String(now.getHours()).padStart(2, '0');
+      const m = String(now.getMinutes()).padStart(2, '0');
+      const s = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // KALENDAR
+    function generateCalendar() {
+      const calendarTitle = document.getElementById('calendar-title');
+      const calendarTable = document.getElementById('calendar-table');
+
+      const now = new Date();
+      const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      const year = now.getFullYear();
+      const month = now.getMonth();
+      const firstDay = new Date(year, month, 1).getDay();
+      const lastDate = new Date(year, month + 1, 0).getDate();
+
+      calendarTitle.textContent = `🗓️ ${monthNames[month]} ${year}`;
+
+      let tableHTML = "<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr><tr>";
+      for (let i = 0; i < firstDay; i++) {
+        tableHTML += "<td></td>";
+      }
+
+      for (let day = 1; day <= lastDate; day++) {
+        tableHTML += `<td>${day}</td>`;
+        if ((day + firstDay) % 7 === 0) tableHTML += "</tr><tr>";
+      }
+
+      tableHTML += "</tr>";
+      calendarTable.innerHTML = tableHTML;
+    }
+
+    generateCalendar();
+  </script>
+
+</body>
+</html>
